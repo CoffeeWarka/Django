@@ -18,13 +18,19 @@ from django.contrib import admin
 from django.urls import path
 from task2.views import func_temp, class_temp
 from task4.views import review_temp, main_temp, watchlist_temp
+from task5.views import sign_up_by_html, sign_up_by_django
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('def/', func_temp),
     path('class/', class_temp.as_view()),
 
-    path('', main_temp),
+    path('main/', main_temp),
     path('review/', review_temp),
-    path('watchlist/', watchlist_temp)
+    path('watchlist/', watchlist_temp),
+
+    path('', sign_up_by_html),
+    path('django_sign_up/', sign_up_by_django)
+
+
 ]
